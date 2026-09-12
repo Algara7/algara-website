@@ -121,7 +121,7 @@
       <h2>Prefer to just message us?</h2>
       <p>Skip the form. Tap the WhatsApp button and tell us about your project — we reply fast.</p>
 
-      <a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20My%20name%20is%20___%20and%20I%27m%20based%20in%20___." target="_blank" class="wa-big">
+      <a href="https://api.whatsapp.com/send?phone=919908567103&text=Hi%20Algara%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20My%20name%20is%20___%20and%20I%27m%20based%20in%20___." target="_blank" class="wa-big">
         <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
         Chat on WhatsApp
       </a>
@@ -224,7 +224,7 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <a href="https://wa.me/919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
+      <a href="https://api.whatsapp.com/send?phone=919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
       <a href="mailto:algara.designs7@gmail.com">algara.designs7@gmail.com</a>
       <a href="https://www.instagram.com/the_algara" target="_blank">Instagram: @the_algara</a>
     </div>
@@ -232,7 +232,7 @@
   <div class="foot-bottom">© 2026 Algara. All rights reserved. · Designed across India.</div>
 </footer>
 
-<a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20enquire%20about%20interior%20design." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://api.whatsapp.com/send?phone=919908567103&text=Hi%20Algara%2C%20I%27d%20like%20to%20enquire%20about%20interior%20design." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
 </a>
 
@@ -256,9 +256,9 @@ document.getElementById('consultForm').addEventListener('submit', function(e){
     (budget ? "*Budget:* " + encodeURIComponent(budget) + "%0A" : "") +
     (message ? "%0A*Details:* " + encodeURIComponent(message) : "");
 
-  window.open("https://wa.me/919908567103?text=" + text, "_blank");
+  window.open("https://api.whatsapp.com/send?phone=919908567103&text=" + text, "_blank");
 });
 </script>
 
 </body>
-  </html>
+</html>
