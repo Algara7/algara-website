@@ -31,7 +31,6 @@
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
 
-  /* NAV */
   nav{
     position:fixed;top:0;left:0;right:0;z-index:100;
     background:rgba(26,26,26,0.85);
@@ -52,7 +51,6 @@
   .nav-cta:hover{background:var(--gold);color:var(--charcoal);}
   @media(max-width:860px){.nav-links{display:none;}}
 
-  /* HERO */
   .hero{
     position:relative;min-height:100vh;display:flex;align-items:center;
     background:
@@ -79,7 +77,6 @@
   .btn-ghost{border-color:rgba(245,240,232,0.35);color:var(--cream);}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
 
-  /* INTRO */
   .intro{padding:120px 0;background:var(--charcoal);}
   .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
   .intro-img{
@@ -97,7 +94,6 @@
   .intro p{color:var(--text-dim);margin-bottom:20px;font-weight:300;}
   @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:50px;}}
 
-  /* SERVICES */
   .services{padding:120px 0;background:var(--charcoal-soft);}
   .services-head{text-align:center;max-width:680px;margin:0 auto 80px;}
   .services-head h2{font-size:clamp(34px,4.5vw,52px);margin-bottom:20px;}
@@ -114,20 +110,17 @@
   .service-card p{color:var(--text-dim);font-size:15px;font-weight:300;}
   @media(max-width:860px){.service-grid{grid-template-columns:1fr;}}
 
-  /* GALLERY STRIP */
   .gallery{padding:0;display:grid;grid-template-columns:repeat(4,1fr);}
   .gallery div{aspect-ratio:1;background-size:cover;background-position:center;transition:transform .6s;}
   .gallery div:hover{transform:scale(1.03);}
   @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr);}}
 
-  /* WHY */
   .why{padding:120px 0;}
   .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;text-align:center;}
   .why-item h3{font-size:24px;color:var(--gold);margin-bottom:14px;}
   .why-item p{color:var(--text-dim);font-size:15px;font-weight:300;}
   @media(max-width:860px){.why-grid{grid-template-columns:1fr;gap:44px;}}
 
-  /* CTA BAND */
   .cta-band{
     padding:110px 32px;text-align:center;
     background:
@@ -137,7 +130,6 @@
   .cta-band h2{font-size:clamp(34px,5vw,58px);margin-bottom:24px;}
   .cta-band p{color:var(--text-dim);max-width:560px;margin:0 auto 40px;font-weight:300;}
 
-  /* FOOTER */
   footer{background:#141414;padding:70px 32px 40px;border-top:1px solid rgba(201,169,97,0.12);}
   .foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;}
   .foot-brand .logo{margin-bottom:18px;display:block;}
@@ -152,7 +144,6 @@
   }
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:40px;}}
 
-  /* FLOATING WHATSAPP */
   .wa-float{
     position:fixed;bottom:28px;right:28px;z-index:200;
     width:60px;height:60px;border-radius:50%;
@@ -166,7 +157,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">ALGARA<span>.</span></a>
@@ -180,7 +170,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <div class="eyebrow">Interior Design · Across India</div>
@@ -193,7 +182,6 @@
   </div>
 </section>
 
-<!-- INTRO -->
 <section class="intro" id="about">
   <div class="wrap intro-grid">
     <div class="intro-img"></div>
@@ -206,7 +194,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="services-head">
@@ -234,7 +221,6 @@
   </div>
 </section>
 
-<!-- GALLERY STRIP -->
 <section class="gallery">
   <div style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80')"></div>
   <div style="background-image:url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=800&q=80')"></div>
@@ -242,7 +228,6 @@
   <div style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80')"></div>
 </section>
 
-<!-- WHY -->
 <section class="why">
   <div class="wrap">
     <div class="services-head">
@@ -266,17 +251,15 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-band">
   <h2>Let's design something quietly beautiful.</h2>
   <p>Book a free consultation — no obligation, just a conversation about your space, your budget, and your vision.</p>
   <div class="btn-row">
     <a href="consult.html" class="btn btn-gold">Book Free Consultation</a>
-    <a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20know%20more%20about%20your%20interior%20design%20services." target="_blank" class="btn btn-ghost">Chat on WhatsApp</a>
+    <a href="https://api.whatsapp.com/send?phone=919908567103&text=Hi%20Algara%2C%20I%27d%20like%20to%20know%20more%20about%20your%20interior%20design%20services." target="_blank" class="btn btn-ghost">Chat on WhatsApp</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-grid">
     <div class="foot-brand">
@@ -291,7 +274,7 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <a href="https://wa.me/919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
+      <a href="https://api.whatsapp.com/send?phone=919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
       <a href="mailto:algara.designs7@gmail.com">algara.designs7@gmail.com</a>
       <a href="https://www.instagram.com/the_algara" target="_blank">Instagram: @the_algara</a>
     </div>
@@ -301,8 +284,7 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20enquire%20about%20interior%20design." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://api.whatsapp.com/send?phone=919908567103&text=Hi%20Algara%2C%20I%27d%20like%20to%20enquire%20about%20interior%20design." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.2 0-5.5 4.5-10 10-10s10 4.5 10 10-4.4 10-9.9 10zm5.5-7.5c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
