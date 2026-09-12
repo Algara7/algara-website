@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Free Consultation — Algara</title>
+<meta name="description" content="Book a free interior design consultation with Algara. Share your project details and we'll reach out on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1a1a1a;--charcoal-soft:#232323;--cream:#f5f0e8;
+    --gold:#c9a961;--gold-soft:#d9bd82;--taupe:#8b7d6b;--text-dim:#b8b0a4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;background:var(--charcoal);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,97,0.15);}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;max-width:1200px;margin:0 auto;}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:4px;color:var(--cream);}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:38px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);}
+  .nav-links a{transition:color .3s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;}
+  .nav-cta:hover{background:var(--gold);color:var(--charcoal);}
+  @media(max-width:860px){.nav-links{display:none;}}
+
+  .page-head{
+    padding:180px 32px 80px;text-align:center;
+    background:linear-gradient(rgba(26,26,26,0.85),rgba(26,26,26,0.95)),url('https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=2000&q=80') center/cover;
+  }
+  .eyebrow{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+  .page-head h1{font-size:clamp(40px,6vw,68px);margin-bottom:20px;}
+  .page-head h1 em{font-style:italic;color:var(--gold-soft);}
+  .page-head p{color:var(--text-dim);max-width:560px;margin:0 auto;font-weight:300;}
+
+  .form-section{padding:100px 0 120px;}
+  .form-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;}
+  @media(max-width:860px){.form-grid{grid-template-columns:1fr;gap:50px;}}
+
+  .info h2{font-size:clamp(30px,4vw,42px);margin-bottom:24px;}
+  .info p{color:var(--text-dim);margin-bottom:32px;font-weight:300;}
+  .info-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start;}
+  .info-icon{width:36px;height:36px;flex-shrink:0;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:16px;}
+  .info-item h4{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;font-weight:500;}
+  .info-item p{margin:0;font-size:15px;}
+  .wa-big{
+    display:inline-flex;align-items:center;gap:10px;margin-top:20px;
+    background:#25D366;color:#fff;padding:14px 28px;font-size:13px;letter-spacing:1.5px;
+    text-transform:uppercase;font-weight:500;transition:transform .3s;
+  }
+  .wa-big:hover{transform:translateY(-2px);}
+  .wa-big svg{width:20px;height:20px;fill:#fff;}
+
+  form{background:var(--charcoal-soft);padding:50px 40px;border:1px solid rgba(201,169,97,0.15);}
+  @media(max-width:600px){form{padding:36px 24px;}}
+  .field{margin-bottom:24px;}
+  .field label{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:500;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:14px 16px;background:var(--charcoal);border:1px solid rgba(201,169,97,0.2);
+    color:var(--cream);font-family:'Inter',sans-serif;font-size:15px;transition:border-color .3s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);}
+  .field textarea{resize:vertical;min-height:110px;}
+  .field select{cursor:pointer;}
+  .field select option{background:var(--charcoal);}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:600px){.field-row{grid-template-columns:1fr;}}
+  .submit-btn{
+    width:100%;padding:18px;background:var(--gold);color:var(--charcoal);border:none;
+    font-family:'Inter',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;
+    font-weight:500;cursor:pointer;transition:all .3s;margin-top:10px;
+  }
+  .submit-btn:hover{background:var(--gold-soft);transform:translateY(-2px);}
+  .form-note{margin-top:18px;font-size:13px;color:var(--taupe);text-align:center;font-weight:300;}
+
+  footer{background:#141414;padding:70px 32px 40px;border-top:1px solid rgba(201,169,97,0.12);}
+  .foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;}
+  .foot-brand .logo{margin-bottom:18px;display:block;}
+  .foot-brand p{color:var(--text-dim);font-size:14px;font-weight:300;max-width:320px;}
+  .foot-col h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:500;}
+  .foot-col a{display:block;color:var(--text-dim);font-size:14px;margin-bottom:12px;transition:color .3s;font-weight:300;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-bottom{max-width:1200px;margin:50px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-size:13px;color:var(--taupe);font-weight:300;}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:40px;}}
+
+  .wa-float{position:fixed;bottom:28px;right:28px;z-index:200;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,0.4);transition:transform .3s;}
+  .wa-float:hover{transform:scale(1.1);}
+  .wa-float svg{width:32px;height:32px;fill:#fff;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ALGARA<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="careers.html">Careers</a>
+      <a href="consult.html">Consultation</a>
+    </div>
+    <a href="consult.html" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<section class="page-head">
+  <div class="eyebrow">Free Consultation</div>
+  <h1>Let's talk about<br><em>your space.</em></h1>
+  <p>Share a few details below — no obligation, no pressure. We'll reach out within 24 hours to understand your vision.</p>
+</section>
+
+<section class="form-section">
+  <div class="wrap form-grid">
+
+    <div class="info">
+      <div class="section-label eyebrow" style="margin-bottom:16px;">Or reach us directly</div>
+      <h2>Prefer to just message us?</h2>
+      <p>Skip the form. Tap the WhatsApp button and tell us about your project — we reply fast.</p>
+
+      <a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20My%20name%20is%20___%20and%20I%27m%20based%20in%20___." target="_blank" class="wa-big">
+        <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+        Chat on WhatsApp
+      </a>
+
+      <div style="margin-top:44px;">
+        <div class="info-item">
+          <div class="info-icon">✉</div>
+          <div>
+            <h4>Email</h4>
+            <p>algara.designs7@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">☎</div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <p>+91 99085 67103</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">◎</div>
+          <div>
+            <h4>Service Area</h4>
+            <p>Pan-India — residential & commercial</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="consultForm">
+      <div class="field">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required placeholder="Your name">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" required placeholder="+91 ...">
+        </div>
+        <div class="field">
+          <label for="city">City *</label>
+          <input type="text" id="city" required placeholder="Your city">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+
+      <div class="field">
+        <label for="type">Project Type *</label>
+        <select id="type" required>
+          <option value="">Select...</option>
+          <option>Residential — Full Home</option>
+          <option>Residential — Single Room</option>
+          <option>Commercial — Office</option>
+          <option>Commercial — Retail / Café</option>
+          <option>Handmade Furniture Enquiry</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="budget">Approximate Budget</label>
+        <select id="budget">
+          <option value="">Prefer not to say</option>
+          <option>Under ₹1 Lakh</option>
+          <option>₹1 – 3 Lakhs</option>
+          <option>₹3 – 7 Lakhs</option>
+          <option>₹7 – 15 Lakhs</option>
+          <option>₹15 Lakhs+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Tell us about your space</label>
+        <textarea id="message" placeholder="A few words about what you're looking for..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Enquiry via WhatsApp</button>
+      <p class="form-note">Submitting opens WhatsApp with your details pre-filled. Just hit send.</p>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <span class="logo">ALGARA<span>.</span></span>
+      <p>Premium interior design and limited handmade furniture, crafted across India with warmth and intention.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="consult.html">Consultation</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
+      <a href="mailto:algara.designs7@gmail.com">algara.designs7@gmail.com</a>
+      <a href="https://www.instagram.com/the_algara" target="_blank">Instagram: @the_algara</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Algara. All rights reserved. · Designed across India.</div>
+</footer>
+
+<a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20enquire%20about%20interior%20design." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+</a>
+
+<script>
+document.getElementById('consultForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var city = document.getElementById('city').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var type = document.getElementById('type').value;
+  var budget = document.getElementById('budget').value;
+  var message = document.getElementById('message').value.trim();
+
+  var text = "Hi Algara, I'd like to book a free consultation.%0A%0A" +
+    "*Name:* " + encodeURIComponent(name) + "%0A" +
+    "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+    "*City:* " + encodeURIComponent(city) + "%0A" +
+    (email ? "*Email:* " + encodeURIComponent(email) + "%0A" : "") +
+    "*Project Type:* " + encodeURIComponent(type) + "%0A" +
+    (budget ? "*Budget:* " + encodeURIComponent(budget) + "%0A" : "") +
+    (message ? "%0A*Details:* " + encodeURIComponent(message) : "");
+
+  window.open("https://wa.me/919908567103?text=" + text, "_blank");
+});
+</script>
+
+</body>
+  </html>
