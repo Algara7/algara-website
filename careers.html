@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers — Algara</title>
+<meta name="description" content="Join Algara. We're building a new kind of interior design studio in India — honest, warm, and design-led.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1a1a1a;--charcoal-soft:#232323;--cream:#f5f0e8;
+    --gold:#c9a961;--gold-soft:#d9bd82;--taupe:#8b7d6b;--text-dim:#b8b0a4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;background:var(--charcoal);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,97,0.15);}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;max-width:1200px;margin:0 auto;}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:4px;color:var(--cream);}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:38px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);}
+  .nav-links a{transition:color .3s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;}
+  .nav-cta:hover{background:var(--gold);color:var(--charcoal);}
+  @media(max-width:860px){.nav-links{display:none;}}
+
+  .page-head{
+    padding:180px 32px 80px;text-align:center;
+    background:linear-gradient(rgba(26,26,26,0.85),rgba(26,26,26,0.95)),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=80') center/cover;
+  }
+  .eyebrow{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+  .page-head h1{font-size:clamp(40px,6vw,68px);margin-bottom:20px;}
+  .page-head h1 em{font-style:italic;color:var(--gold-soft);}
+  .page-head p{color:var(--text-dim);max-width:600px;margin:0 auto;font-weight:300;}
+
+  .values{padding:110px 0;background:var(--charcoal-soft);}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 70px;}
+  .section-head h2{font-size:clamp(32px,4.5vw,50px);margin-bottom:20px;}
+  .section-head p{color:var(--text-dim);font-weight:300;}
+  .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  .value-card{padding:40px 32px;border:1px solid rgba(201,169,97,0.15);transition:border-color .4s;}
+  .value-card:hover{border-color:var(--gold);}
+  .value-card h3{font-size:24px;color:var(--gold);margin-bottom:16px;}
+  .value-card p{color:var(--text-dim);font-size:15px;font-weight:300;}
+  @media(max-width:860px){.values-grid{grid-template-columns:1fr;}}
+
+  .openings{padding:110px 0;}
+  .roles{max-width:900px;margin:0 auto;}
+  .role{
+    padding:36px 0;border-bottom:1px solid rgba(201,169,97,0.15);
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .role:first-child{border-top:1px solid rgba(201,169,97,0.15);}
+  .role h3{font-size:26px;margin-bottom:6px;}
+  .role .meta{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--taupe);}
+  .role a{
+    font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);
+    border:1px solid var(--gold);padding:12px 26px;transition:all .3s;white-space:nowrap;
+  }
+  .role a:hover{background:var(--gold);color:var(--charcoal);}
+
+  .apply{padding:0 0 120px;}
+  .apply-box{max-width:800px;margin:0 auto;background:var(--charcoal-soft);padding:60px 50px;border:1px solid rgba(201,169,97,0.15);}
+  @media(max-width:600px){.apply-box{padding:40px 24px;}}
+  .apply-box h2{font-size:clamp(28px,3.5vw,40px);margin-bottom:16px;text-align:center;}
+  .apply-box > p{text-align:center;color:var(--text-dim);margin-bottom:40px;font-weight:300;}
+  .field{margin-bottom:22px;}
+  .field label{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:500;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:14px 16px;background:var(--charcoal);border:1px solid rgba(201,169,97,0.2);
+    color:var(--cream);font-family:'Inter',sans-serif;font-size:15px;transition:border-color .3s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);}
+  .field textarea{resize:vertical;min-height:110px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:600px){.field-row{grid-template-columns:1fr;}}
+  .submit-btn{
+    width:100%;padding:18px;background:var(--gold);color:var(--charcoal);border:none;
+    font-family:'Inter',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;
+    font-weight:500;cursor:pointer;transition:all .3s;margin-top:10px;
+  }
+  .submit-btn:hover{background:var(--gold-soft);transform:translateY(-2px);}
+  .form-note{margin-top:18px;font-size:13px;color:var(--taupe);text-align:center;font-weight:300;}
+
+  footer{background:#141414;padding:70px 32px 40px;border-top:1px solid rgba(201,169,97,0.12);}
+  .foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;}
+  .foot-brand .logo{margin-bottom:18px;display:block;}
+  .foot-brand p{color:var(--text-dim);font-size:14px;font-weight:300;max-width:320px;}
+  .foot-col h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:500;}
+  .foot-col a{display:block;color:var(--text-dim);font-size:14px;margin-bottom:12px;transition:color .3s;font-weight:300;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-bottom{max-width:1200px;margin:50px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-size:13px;color:var(--taupe);font-weight:300;}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:40px;}}
+
+  .wa-float{position:fixed;bottom:28px;right:28px;z-index:200;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,0.4);transition:transform .3s;}
+  .wa-float:hover{transform:scale(1.1);}
+  .wa-float svg{width:32px;height:32px;fill:#fff;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ALGARA<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="consult.html">Consultation</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <a href="consult.html" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<section class="page-head">
+  <div class="eyebrow">Careers at Algara</div>
+  <h1>Build something<br><em>quietly beautiful.</em></h1>
+  <p>We're a new studio with big intentions. If you love design, care about craft, and want to grow with a brand from the ground up — we'd love to hear from you.</p>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why Algara</div>
+      <h2>A small team with real ownership.</h2>
+      <p>No corporate layers. No soulless projects. Just good work, made by people who care.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Real Ownership</h3>
+        <p>You'll shape projects from start to finish. Your ideas won't get buried in a chain of approvals.</p>
+      </div>
+      <div class="value-card">
+        <h3>Craft Over Speed</h3>
+        <p>We'd rather take one extra week and get it right than rush something we're not proud of.</p>
+      </div>
+      <div class="value-card">
+        <h3>Honest Culture</h3>
+        <p>Transparent pay, clear expectations, and a team that says what it means. No politics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="openings">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Open Roles</div>
+      <h2>Come design with us.</h2>
+      <p>Don't see your role listed? Apply anyway — we're always open to the right person.</p>
+    </div>
+
+    <div class="roles">
+      <div class="role">
+        <div>
+          <h3>Interior Designer</h3>
+          <div class="meta">Full-time · Pan-India (Remote-friendly)</div>
+        </div>
+        <a href="#apply">Apply</a>
+      </div>
+
+      <div class="role">
+        <div>
+          <h3>3D Visualiser</h3>
+          <div class="meta">Full-time / Freelance · Remote</div>
+        </div>
+        <a href="#apply">Apply</a>
+      </div>
+
+      <div class="role">
+        <div>
+          <h3>Site Supervisor</h3>
+          <div class="meta">Full-time · Hyderabad & nearby</div>
+        </div>
+        <a href="#apply">Apply</a>
+      </div>
+
+      <div class="role">
+        <div>
+          <h3>Social Media & Content</h3>
+          <div class="meta">Part-time · Remote</div>
+        </div>
+        <a href="#apply">Apply</a>
+      </div>
+
+      <div class="role">
+        <div>
+          <h3>General Application</h3>
+          <div class="meta">Any role · Any city</div>
+        </div>
+        <a href="#apply">Apply</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="apply-box">
+      <h2>Apply to Algara</h2>
+      <p>Fill this in and we'll open WhatsApp with your details. Attach your portfolio or CV by sending it right after on WhatsApp.</p>
+
+      <form id="careerForm">
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" required placeholder="Your name">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" required placeholder="+91 ...">
+          </div>
+          <div class="field">
+            <label for="city">City *</label>
+            <input type="text" id="city" required placeholder="Your city">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="role">Role Applying For *</label>
+          <select id="role" required>
+            <option value="">Select...</option>
+            <option>Interior Designer</option>
+            <option>3D Visualiser</option>
+            <option>Site Supervisor</option>
+            <option>Social Media & Content</option>
+            <option>General Application</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="experience">Years of Experience</label>
+          <select id="experience">
+            <option value="">Select...</option>
+            <option>Fresher</option>
+            <option>0 – 1 year</option>
+            <option>1 – 3 years</option>
+            <option>3 – 5 years</option>
+            <option>5+ years</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="portfolio">Portfolio / LinkedIn Link</label>
+          <input type="url" id="portfolio" placeholder="https://...">
+        </div>
+
+        <div class="field">
+          <label for="message">Why Algara?</label>
+          <textarea id="message" placeholder="A few lines about you and why you'd like to join..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Application via WhatsApp</button>
+        <p class="form-note">Opens WhatsApp with your details pre-filled. Just hit send, then attach your CV or portfolio.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <span class="logo">ALGARA<span>.</span></span>
+      <p>Premium interior design and limited handmade furniture, crafted across India with warmth and intention.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="consult.html">Consultation</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/919908567103" target="_blank">WhatsApp: +91 99085 67103</a>
+      <a href="mailto:algara.designs7@gmail.com">algara.designs7@gmail.com</a>
+      <a href="https://www.instagram.com/the_algara" target="_blank">Instagram: @the_algara</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Algara. All rights reserved. · Designed across India.</div>
+</footer>
+
+<a href="https://wa.me/919908567103?text=Hi%20Algara%2C%20I%27d%20like%20to%20apply%20for%20a%20role." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+</a>
+
+<script>
+document.getElementById('careerForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var city = document.getElementById('city').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var role = document.getElementById('role').value;
+  var exp = document.getElementById('experience').value;
+  var portfolio = document.getElementById('portfolio').value.trim();
+  var message = document.getElementById('message').value.trim();
+
+  var text = "Hi Algara, I'd like to apply for a role.%0A%0A" +
+    "*Name:* " + encodeURIComponent(name) + "%0A" +
+    "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+    "*City:* " + encodeURIComponent(city) + "%0A" +
+    "*Email:* " + encodeURIComponent(email) + "%0A" +
+    "*Role:* " + encodeURIComponent(role) + "%0A" +
+    (exp ? "*Experience:* " + encodeURIComponent(exp) + "%0A" : "") +
+    (portfolio ? "*Portfolio:* " + encodeURIComponent(portfolio) + "%0A" : "") +
+    (message ? "%0A*Why Algara:* " + encodeURIComponent(message) : "");
+
+  window.open("https://wa.me/919908567103?text=" + text, "_blank");
+});
+</script>
+
+</body>
+                                      </html>
